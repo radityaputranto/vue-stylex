@@ -1,25 +1,23 @@
-.DS_STORE
+.DS_Store
 node_modules
-*~
-__benchmarks__
-.yarn/cache
-.yarn/unplugged
-.yarn/build-state.yml
-.yarn/install-state.gz
-yarn.lock
-build
-dist
-packages/*/dist
-packages/*/.next
-.module-cache
-*.log*
-chrome-user-data
-*.sublime-project
-*.sublime-workspace
+/dist
+
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
 .idea
-*.iml
 .vscode
-*.swp
-*.swo
-.cache
-.parcel-cache
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
