@@ -1,60 +1,87 @@
 <template>
   <div class="hello">
-      <button :class="buttonClasses">A Stylex button!</button>
-
     <h1>{{ msg }}</h1>
+    <button :class="buttonClasses">A Stylex button!</button>
+    <h3>Forked projeect from :</h3>
+    <ul>
+      <li>
+        <a
+          href="https://github.com/reacttips-dev/stylex"
+          target="_blank"
+          rel="noopener"
+          >reacttips-dev/stylex</a
+        >
+      </li>
+    </ul>
+
     <p>
-      For a guide and recipes on how to configure / customize this project,<br>
+      For a guide and recipes on how to configure / customize this project,<br />
       check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
+      <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
+        >vue-cli documentation</a
+      >.
     </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+
+    <hr />
+    <h3 :class="heading">Sub Heading</h3>
+    <button :class="buttonSubmit">Submit Button</button>
   </div>
 </template>
 
 <script>
-
-import stylex from '@ladifire-opensource/stylex'
+import stylex from "@ladifire-opensource/stylex";
 
 const styles = stylex.create({
-    button: {
-        borderRadius: 8,
-        padding: 16,
-        backgroundColor: "#1DA1F2",
-        color: "#fff"
-    },
+  button: {
+    borderRadius: 18,
+    padding: 16,
+    backgroundColor: "#1DA1F2",
+    color: "#fff",
+    borderColor: "#e3e312",
+  },
+  heading: {
+    color: "blue",
+    backgroundColor: "black",
+    margin: "100px",
+  },
+});
+
+const button_styles = stylex.create({
+  base: {
+    marginTop: "30px",
+    border: "none",
+    background: "none",
+    padding: "20px 10px",
+    bordedrRadius: ".25em",
+    cursor: "pointer",
+  },
+  variant: {
+    color: "white",
+    backgroundColor: "#00AAFF",
+  },
+  danger: {
+    color: "white",
+    backgroundColor: "#FF0000",
+  },
 });
 
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
-    msg: String
+    msg: String,
   },
   computed: {
     buttonClasses() {
       return stylex(styles.button);
-    }
-  }
-}
+    },
+    heading() {
+      return stylex(styles.heading);
+    },
+    buttonSubmit() {
+      return stylex(button_styles.base, button_styles.danger);
+    },
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

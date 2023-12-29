@@ -1,19 +1,21 @@
-# stylex-vuejs-examples
+# VueJS with StyleX
 
-## Project setup
-```
+Experiment project integrate Vue js with StyleX Facebook.
+Forked from : [CloudX Frontend documentation](https://github.com/reacttips-dev/stylex)
+
+Dependencies :
+
+-   NodeJS <18.0.0
+-   vue 2.6.11
+-   stylex 0.1.0-beta.0
+-   stylex-webpack-plugin 0.1.0-beta.0
+
+## Development
+
+```bash
+# yarn
+
 yarn install
-```
-
-### Compiles and hot-reloads for development
-```
+yarn build
 yarn serve
 ```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
