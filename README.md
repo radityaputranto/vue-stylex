@@ -1,7 +1,7 @@
 # VueJS with StyleX
 
 Experiment project integrate Vue js with StyleX Facebook.
-Forked from : [CloudX Frontend documentation](https://github.com/reacttips-dev/stylex)
+Forked from : [reacttips-dev/stylex](https://github.com/reacttips-dev/stylex)
 
 Dependencies :
 
